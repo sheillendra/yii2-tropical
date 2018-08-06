@@ -25,7 +25,7 @@ class TropicalAsset extends AssetBundle {
         'css/responsive.css',
     ];
     public $js = [
-        'js/jquery-2.1.3.min.js',
+//        'js/jquery-2.1.3.min.js',
         'js/jquery-migrate-1.2.1.js',
         'js/bootstrap.min.js',
         'js/respond.min.js',
@@ -38,7 +38,9 @@ class TropicalAsset extends AssetBundle {
         'js/css3-animate-it.js',
         'js/jquery-ui.js',
         'js/bootstrap-datepicker.js',
-        'js/tropical.js'
     ];
 
+    public $depends = [
+        'yii\web\JqueryAsset'
+    ];
 }
