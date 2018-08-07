@@ -42,6 +42,7 @@ use yii\widgets\Menu;
                         <div>
                             <input type="text" placeholder="Search" name="s" class="search-text" >
                             <input type="submit" class="search-submit" value="" >
+                            <i class="fa fa-search"></i>
                         </div>
                     </form>
                 </div>
