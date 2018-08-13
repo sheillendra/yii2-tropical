@@ -11,7 +11,7 @@ $asset = TropicalAsset::register($this);
 $banner = BannerExt::find()->random();
 ?>
 <div id="tropical-banner" class=" text-center clearfix">
-    <?php echo Html::img(['/images/banner/' . $banner->id . '_2100x325.jpg'], ['alt' => $banner->caption]) ?>
+    <?php echo Html::img(['/images/banner/' . $banner->id . '_2100x325.jpg'], ['alt' => $banner->{caption_1_ . Yii::$app->language}]) ?>
     <div class="container banner-contents clearfix">
         <h2 class="template-title p-name"><strong><?php echo $title ?></strong></h2>
     </div>
