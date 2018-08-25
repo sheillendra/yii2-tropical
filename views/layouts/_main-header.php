@@ -11,11 +11,18 @@ use yii\widgets\Menu;
                 <?php if (Yii::$app->user->isGuest): ?>
                     <span class="p-name"> <?php echo Yii::$app->params['welcomeText'] ?> </span>
                 <?php else: ?>
-                    <span class="p-name"> <?php echo Yii::$app->user->username ?> </span>
+                    <span class="p-name"> <?php echo Yii::$app->user->identity->username ?> </span>
                     <i class="fa fa-user"></i>
                 <?php endif; ?>
             </div>
             <?php // echo $this->render('@app/views/_partials/_headerTourPackage', ['asset' => $asset]) ?>
+            <?php if (!Yii::$app->user->isGuest): ?>
+                <div class="header-user-email pull-right">
+                    <i class="fa fa-sign-out"></i>
+                    <?php echo Html::a('Logout', ['/site/logout'], ['class' => 'u-url']) ?>
+                </div>
+            <?php endif; ?>
+
             <div class="header-user-tel pull-right">
                 <i class="fa fa-mobile-phone fa-lg"></i>
                 <span class="tel"><?php echo Yii::$app->params['infoPhone'] ?></span>
