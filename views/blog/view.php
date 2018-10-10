@@ -17,11 +17,11 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-md-9 col-sm-8">
                 <article class="blog-post">
                     <figure class="feature-img">
-                        <?php echo Html::img(['/images/blog/' . $model->filename . '_870x580.jpg'], ['alt' => $model->title]) ?>
+                        <?php echo Html::img(Yii::$app->urlManagerFrontend->createAbsoluteUrl(['/images/blog/' . $model->filename . '_870x580.jpg']), ['alt' => $model->title]) ?>
                     </figure>
                     <div class="entry-contents animatedParent clearfix">
                         <h4 class="entry-title animated fadeInUpShort"><?php echo $model->title ?></h4>
-                        <?php echo $model->content ?>
+                        <?php echo Yii::$app->formatter->asHtml($model->content) ?>
                         <div class="post-meta animated flipInX clearfix">
                             <span class="date pull-left"><i class="fa fa-clock-o"></i>&nbsp; <?php echo Yii::$app->formatter->asDate($model->created_at) ?>  &nbsp; | &nbsp; &nbsp;</span>
                             <span class="author pull-left"> <i class="fa fa-user"></i>&nbsp; By <?php echo $model->createdBy->username ?></span>

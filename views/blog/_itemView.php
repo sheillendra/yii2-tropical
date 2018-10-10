@@ -10,8 +10,8 @@ use yii\helpers\Html;
 <article class="blog-post animatedParent clearfix">
     <figure class="blog-feature-img text-center animated fadeInLeftShort">
         <?php
-        echo Html::a(Html::img(['/images/blog/' . $model->filename .
-                    '_950x750.jpg'], ['alt' => $model->title]))
+        echo Html::a(Html::img(Yii::$app->urlManagerFrontend->createAbsoluteUrl(['/images/blog/' . $model->filename .
+                            '_950x750.jpg']), ['alt' => $model->title]))
         ?>
     </figure>
     <div class="entry-contents animated fadeInRightShort clearfix">
